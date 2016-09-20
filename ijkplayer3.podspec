@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
  
 
   s.name         = "ijkplayer3"
-  s.version      = "0.6.2.1"
+  s.version      = "0.6.2.2"
   s.summary      = "ijkplayer0.6.2.1 base on ffmpeg 3.1"
  
 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   
   s.libraries = 'z' 
   
-  s.source       = { :git => "https://github.com/xpemail/ijkplayer3.git", :tag => "0.6.2.1"}
+  s.source       = { :git => "https://github.com/xpemail/ijkplayer3.git", :tag => "0.6.2.2"}
   s.ios.deployment_target = "6.0"  
     
   s.requires_arc = true 
@@ -110,6 +110,7 @@ Pod::Spec.new do |s|
                 gles2.subspec 'fsh' do |fsh|
                     fsh.source_files = "ijkplayer/ijkmedia/ijksdl/gles2/fsh/*.{h,c}"
                 end
+
                 gles2.subspec 'vsh' do |vsh|
                     vsh.source_files = "ijkplayer/ijkmedia/ijksdl/gles2/vsh/*.{h,c}"
                 end
