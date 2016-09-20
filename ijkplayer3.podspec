@@ -102,12 +102,23 @@ Pod::Spec.new do |s|
      			ffmpeg.subspec 'abi_all' do |abi_all|
      				abi_all.source_files = "ijkplayer/ijkmedia/ijksdl/ffmpeg/abi_all/*.{h,c}"
   				end 
-  			end 
-  		end 
-  		
+  			end
+
+            ijksdl.subspec 'gles2' do |gles2|
+                gles2.source_files = "ijkplayer/ijkmedia/ijksdl/gles2/*.{h,c}"
+
+                gles2.subspec 'fsh' do |fsh|
+                    fsh.source_files = "ijkplayer/ijkmedia/ijksdl/gles2/fsh/*.{h,c}"
+                end
+                gles2.subspec 'vsh' do |vsh|
+                    vsh.source_files = "ijkplayer/ijkmedia/ijksdl/gles2/vsh/*.{h,c}"
+                end
+            end
+  		end
+
   	 end
   end
-   
+
   s.prefix_header_file = 'ijkplayer/ios/IJKMediaPlayer/IJKMediaPlayer/IJKMediaPlayer-Prefix.pch'
 
 end
